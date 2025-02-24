@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Delivery - ITC505 Lab 3</title>
+    <style>
+        @font-face {
+            font-family: 'SillyFont';
+            src: url('SillyFont.woff2') format('woff2'),
+                 url('SillyFont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'SillyFont', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Deliver a Font to the Browser</h1>
+    <p>One common way to deliver a font to a client (browser) is by using the <code>@font-face</code> rule in CSS. This allows the server to host the font files and send them to the browser when a user loads the webpage. The browser then applies the custom font to the text on the page.</p>
+    <p>In this example, I have chosen a unique font, "SillyFont", which is not commonly found on most computers. The font files (WOFF2 and WOFF formats) are stored on my server and referenced using the <code>@font-face</code> rule. When a user visits this page, their browser downloads the font and renders the text using it.</p>
+    
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
